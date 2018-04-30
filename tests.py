@@ -17,3 +17,6 @@ assert is_valid_cc(cc5), "credit card numbers can contain spaces"
 
 cc6 = "0000       0000    0000  0000"
 assert is_valid_cc(cc6), "credit card numbers can contain many spaces"
+
+cc7 = "(0000 0000 0000 0000)"
+assert is_valid_cc(cc7), "parens should be ignored"

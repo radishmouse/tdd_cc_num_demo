@@ -9,10 +9,11 @@ def is_16_length(cc_num):
   return len(cc_num) == 16
 
 def clean_number(cc_num):
+  STRIPPED_CHARS = " -()"
   cleaned_cc = ""
   for char in cc_num:
     # if char != "-" and char != " ":
-    if char not in " -":
+    if char not in STRIPPED_CHARS:
       cleaned_cc = cleaned_cc + char
   return cleaned_cc
 
